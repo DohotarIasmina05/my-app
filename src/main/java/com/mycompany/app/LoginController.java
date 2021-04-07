@@ -1,5 +1,8 @@
 package com.mycompany.app;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,6 +18,7 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.scene.control.ChoiceBox;
 
+
 import java.awt.*;
 import java.io.File;
 import java.util.ResourceBundle;
@@ -29,7 +33,7 @@ public class LoginController implements Initializable {
     @FXML
     private ImageView brandingImageView;
     @FXML
-    private ChoiceBox role;
+    private ComboBox  comb;
 
 
 
@@ -42,15 +46,16 @@ public class LoginController implements Initializable {
         File brandingFile= new File("images/book_image.png");
         Image brandingImage= new Image(brandingFile.toURI().toString());
        brandingImageView.setImage(brandingImage);
-        ChoiceBox role = new ChoiceBox();
-        role.getItems().add("Client");
-        role.getItems().add("Admin");
-        role.show();
-
+        ObservableList<String> list ;
+        list =  FXCollections.observableArrayList("Admin","Reader");
+        comb.setItems( list);
 
 
     }
+     public void Select(ActionEvent event){
+        String s= comb.getSelectionModel().getSelectedItem().toString();
 
+     }
     public void loginButtonOnAction(ActionEvent event){
 
 
