@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffccff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.app.Controllers.LibrarianViewController">
+    <children>
+        <Hyperlink layoutX="20.0" layoutY="362.0" onAction="#handleGoBackToLogIn" text="&lt; Sign out" textFill="#0707bd" />
+        <ImageView fitHeight="269.0" fitWidth="413.0" layoutX="81.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../photo-1524995997946-a1c2e315a42f.jpg" />
+            </image>
+        </ImageView>
+        <Button layoutX="20.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="155.0" text="Add book" />
+        <Button layoutX="461.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Delete book" />
+        <Button layoutX="276.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Renew book" />
+
+    </children>
+</AnchorPane>
