@@ -24,15 +24,15 @@ public class BookService {
         }
     }
 
-    public static void addBook(String title, String author, String genre, String libraryName) throws EmptyTitleFieldException, EmptyAuthorFieldException{
-        checkEmptyFields(title, author, genre, libraryName);
+    public static void addBook(String title, String author) throws EmptyTitleFieldException, EmptyAuthorFieldException{
+        checkEmptyFields(title, author);
         String borrowedDate = "";
         String returnedDate = "";
         String username = "";
         bookRepository.insert(new Book(title, author,borrowedDate, returnedDate, username));
     }
 
-    private static void checkEmptyFields(String title, String author, String genre, String libraryName) throws EmptyTitleFieldException, EmptyAuthorFieldException {
+    private static void checkEmptyFields(String title, String author) throws EmptyTitleFieldException, EmptyAuthorFieldException {
         if (title == "") {
             throw new EmptyTitleFieldException();
         } else {
