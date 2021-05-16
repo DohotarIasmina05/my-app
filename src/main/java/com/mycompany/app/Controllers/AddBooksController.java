@@ -33,7 +33,7 @@ public class AddBooksController {
     {
         try{
             BookService.addBook(titleField.getText(), authorField.getText());
-            addBookMessage.setText("Book added successfully!");
+            addBookMessage.setText("Book added successfully.");
         } catch (EmptyTitleFieldException e1) {
             addBookMessage.setText(e1.getMessage());
         } catch (EmptyAuthorFieldException e2) {
