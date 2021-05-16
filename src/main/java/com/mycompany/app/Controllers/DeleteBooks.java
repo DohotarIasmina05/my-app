@@ -28,7 +28,7 @@ class DeleteBooksController {
     {
         try {
             BookService.deleteBook(deleteBooksField.getText());
-            deleteBookMessage.setText("Book deleted successfully!");
+            deleteBookMessage.setText("Book deleted successfully.");
             listOfBooks.getItems().clear();
             setTheListOfBooks();
         }  catch (EmptyTitleFieldException e2)
