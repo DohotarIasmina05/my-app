@@ -1,6 +1,6 @@
 package com.mycompany.app.Exceptions;
 
-public class EmptyAuthorFieldException extends Exception{
+public class EmptyAuthorFieldException extends Exception {
 
     public EmptyAuthorFieldException() {
 
